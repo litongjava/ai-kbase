@@ -1,9 +1,10 @@
 package com.litongjava.ai.kbase;
 
+import com.litongjava.tio.boot.TioApplication;
+import com.litongjava.tio.boot.annotation.ComponentScan;
 import org.tio.utils.jfinal.P;
 
-import com.litongjava.tio.http.server.boot.TioApplication;
-
+@ComponentScan
 public class AiKbaseApp {
 
   public static void main(String[] args) throws Exception {
