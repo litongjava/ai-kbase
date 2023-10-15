@@ -1,11 +1,11 @@
 package com.litongjava.ai.kbase.utils;
 
 
+import cn.hutool.log.StaticLog;
 import com.benjaminwan.ocrlibrary.OcrEngine;
 import com.litongjava.ai.kbase.config.ConfigKeys;
 import com.litongjava.ai.kbase.config.ProjectConfig;
 import com.litongjava.jfinal.aop.Aop;
-import lombok.extern.slf4j.Slf4j;
 
 public enum LocalOcr {
   INSTANCE;
@@ -23,7 +23,7 @@ public enum LocalOcr {
     String keysName = projectConfig.getStr(ConfigKeys.keysName);
 
     LibraryUtils.addLibary(libPath);
-
+    StaticLog.info("start to init ocr engine");
     this.ocrEngine = new OcrEngine();
     ocrEngine.setNumThread(4);
     //------- init Logger -------
